@@ -43,6 +43,65 @@
  *          var pi = 3.14
  *          var myNum=new Number(value);
  *          var myNum=Number(value)
+ *      String
+ *          var str='This is String';(单引号、双引号在JS中基本无区别)
+ *          var str=new String(s);
+ *          var str=String(s);
+ *          方法和属性
+ *      Boolean
+ *          var bol=true
+ *          var bol=new Boolean(value);
+ *          var bole-Boolean(value);
+ *          方法和属性
+ *      Array
+ *          var arr=new Array()
+ *          var arr=new Array(size)
+ *          var arr=new Array(e1,e2,e3,... en);
+ *              PS: JS中数组无关联数组，如想定义类似PHP关联数组的作用，需用对象来实现
+ *          方法和属性
+ *      Date
+ *          var date=new Date();
+ *          方法和属性
+ *      Math
+ *          var pi_value = Math.PI
+ *          var sqrt_value=Math.sqrt(15);
+ *          方法和属性
+ *      RegExp
+ *          /pattern/attribute    (正则模式)/(模式修正符)
+ *          new RegExp(pattern,attributes);
+ *          方法和属性
+ *
+ * 延伸考点：Window对象
+ *      Window对象
+ *          Window、Navigator、Screen。History、Location
+ *      DOM对象
+ *          Document、Element、Attr、Event
+ *
+ * 延伸考点：Jquery基础知识
+ *      jQuery选择器：
+ *          基本选择器、层次选择器、过滤选择器、可见性过滤选择器、属性过滤选择器、
+ *          子元素过滤选择器、表单对象属性过滤选择器
+ *      jQuery事件
+ *          $("button").click(function(){..some code...})
+ *      jQuery效果
+ *          $("p").show()
+ *      jQuery DOM操作
+ *          属性、值、节点、CSS、尺寸
+ *
+ * 解题方法
+ *      牢记以上基础知识点，比较常考察的是JS的HTML样式操作以及jQuery的选择器个事件、样式操作。
+ *
+ * 一网打尽
+ *      真题：JS中为id是test的元素设置样式为good
+ *          document.getElementById('test').className = 'good';
+ *      真题：要求使用jQuery事件写在页面元素加载完成之后，动态绑定click事件到btnOK元素
+ *          $(function(){
+                $(".btnOK").click(function(){
+ *                  ...
+ *              })
+ *          });
+ *
+ *
  *
  *
  *
