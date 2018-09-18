@@ -51,4 +51,16 @@
  *
  */
 
+//while - list() - each() 遍历数组
+$indexData = array(
+    '0' => "AA",
+    '1' => "BB",
+    '2' => "CC"
+);
+
+while (list($key, $value) = each($indexData)) {
+    echo $value . "4" . "<br>";
+}
+
+
 

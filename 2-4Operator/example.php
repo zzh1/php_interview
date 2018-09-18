@@ -19,11 +19,11 @@ $b = 0;
 
 if ($a = 3 < 0 || $b = 3 > 0)
 {
-    var_dump($a,$b);exit;
+//    var_dump($a,$b);exit;
     $a++;
     $b++;
-    echo $a. "\n";
-    echo $b. "\n";
+    echo var_dump($a). "\n";
+    echo var_dump($b). "\n";
 }
 
 
