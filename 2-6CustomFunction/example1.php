@@ -27,7 +27,7 @@ function get_count()
     return $count++;
 }
 
-echo $count;
+echo $count.'<br />';
 ++$count;
 
 echo get_count();
