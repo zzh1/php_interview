@@ -22,8 +22,20 @@
  *                   u 进行utf-8中文匹配时用到
  *      后向引用
  *      贪婪模式
- *      正则表达式PCRE函数：preg_match()、preg_match_all()、
- *                          preg_replace()、preg_split()
+ *      正则表达式PCRE函数：
+ *                  int preg_match(string $pattern , string $subject[, array &$matches [, int $flags = 0 [, int $offset = 0 ]]]):
+ *                          执行匹配正则表达式 搜索subject与pattern给定的正则表达式的一个匹配.
+ *                          preg_match()返回 pattern 的匹配次数。 它的值将是0次（不匹配）或1次，因为preg_match()在第一次匹配后 将会停止搜索。
+ *                  int preg_match_all(string $pattern , string $subject[, array &$matches [, int $flags = PREG_PATTERN_ORDER [, int $offset = 0 ]]]):
+ *                          搜索subject中所有匹配pattern给定正则表达式 的匹配结果并且将它们以flag指定顺序输出到matches中.
+ *                          返回完整匹配次数（可能是0），或者如果发生错误返回FALSE。
+ *                  mixed preg_replace(mixed $pattern , mixed $replacement , mixed $subject [, int $limit = -1 [, int &$count ]])
+ *                          搜索subject中匹配pattern的部分， 以replacement进行替换。
+ *                          如果subject是一个数组， preg_replace()返回一个数组， 其他情况下返回一个字符串。
+                            如果匹配被查找到，替换后的subject被返回，其他情况下 返回没有改变的 subject。如果发生错误，返回 NULL 。
+ *                  array preg_split(string $pattern , string $subject [, int $limit = -1 [, int $flags = 0 ]]):
+ *                          通过一个正则表达式分隔字符串
+ *                          返回一个使用 pattern 边界分隔 subject 后得到 的子串组成的数组， 或者在失败时返回 FALSE。
  *      中文匹配(一般不会考)： UTF-8汉字编码范围是0x4e00-0x9fa5,
  *                  在ANSI(gb2312)环境下，0xb0-0xf7,0xa1-0xfe
  *                  UTF-8要使用u模式修正字符串被当成UTF-8，在ANSI(gb2312)环境下，要使用
