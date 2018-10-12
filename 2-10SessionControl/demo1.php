@@ -27,7 +27,7 @@
  *          session_destroy();
  *      Session的配置
  *          session.auto_start: 是否自动开启session
- *          session.cookie_domain：存储sessionid的cookie的有效域名（sessionid是保存子啊cookie里的，是基于cookie的）
+ *          session.cookie_domain：存储sessionid的cookie的有效域名（sessionid是保存在cookie里的，是基于cookie的）
  *          session.cookie_lifetime
  *          session.cookie_path
  *          session.name  (默认为：PHPSESSID)
@@ -66,6 +66,26 @@
  *      答：存储方式，默认情况是存储到服务器文件的，还可以
  *              通过session_set_save_handler存储到数据库、内存等等
  *          遍历，$_SESSION数组即可
+ *
+ *
+ *
+ * 复习一：
+ *      cookie和session原理及区别
+ *
+ *          cookie采用的是客户端的会话状态的一种存储机制。它是服务器在本地机器上存储的
+ *      一小段文本或者是内存中的一段数据，并随每一个请求发送至同一个服务器。
+ *
+ *          session是一种服务端的信息管理机制，它把这些信息以文件的形式存放在服务器的硬盘空间上（
+ *      这是默认情况，可以用memcache把这种数据放到内存里）当客户端向服务器发送请求时，要求服务端
+ *      产生一个session时，服务器会先检查一下，客户端的cookie里面有没有session_id，是否过期。
+ *      如果有这样的session_id的话，服务器端会根据cookie里的session_id把服务器的session检索出来。
+ *      如果没有这样的session_id的话，服务器端会重新建立一个。PHPSESSID是一串加了密的字符串，它的
+ *      生成按照一定规则来执行。同一客户端启动二次session_start的话，session_id是不一样的。
+ *
+ *      区别：Cookie保存在客户端浏览器中，而Session保存在服务器上。Cookie机制是通过检查客户身上的
+ *            “通行证”来确定客户身份的话，那么session机制就是通过检查服务器上的"客户明细表"来确认
+ *            客户身份。session相当于程序子啊服务器上建立的一份客户档案，客户来访的时候只需要查询
+ *            客户档案表就可以了。
  *
  *
  *
