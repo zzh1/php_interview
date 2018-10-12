@@ -23,18 +23,21 @@
  *      接口的定义：方法都是抽象的 将类定义成interface。
  *
  * 延伸考点：魔术方法
- *      __construct()
- *      __destruct()
- *      __call()
- *      __callStatic()
- *      __get()
- *      __set()
- *      __isset()
- *      __unset()
- *      __sleep()
- *      __wakeup()
- *      __toString()
- *      __clone()
+ *      __construct()  类的构造函数
+ *      __destruct() 类的析构函数
+ *      __call()    在对象中调用一个不可访问方法时调用
+ *      __callStatic()  用静态方式中调用一个不可访问方法时调用
+ *      __get()   获得一个类的成员变量时调用
+ *      __set()   设置一个类的成员变量时调用
+ *      __isset()  当对不可访问属性调用isset()或empty()时调用
+ *      __unset()  当对不可访问属性调用unset()时被调用。
+ *      __sleep()  执行serialize()时，先会调用这个函数
+ *      __wakeup()  执行unserialize()时，先会调用这个函数
+ *      __toString() 类被当成字符串时的回应方法
+ *      __clone()  当对象复制完成时调用
+ *
+ *  参考链接  PHP之十六个魔术方法详细介绍：https://www.jb51.net/article/96167.htm
+ *
  *
  * 延伸考点：设计模式（大话设计模式）
  *      常见设计模式：工厂模式、单例模式、注册数模式、适配器模式、观察者模式和策略模式

@@ -87,6 +87,9 @@
  *            客户身份。session相当于程序子啊服务器上建立的一份客户档案，客户来访的时候只需要查询
  *            客户档案表就可以了。
  *
+ * 参考博客：https://blog.csdn.net/wuhuagu_wuhuaguo/article/details/78552633
+ *           https://blog.csdn.net/wuhuagu_wuhuaguo/article/details/64169368
+ *
  *
  *
  *
